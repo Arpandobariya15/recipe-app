@@ -4,11 +4,7 @@ import { BsStopwatchFill } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa6";
 
 const RecipeItems = ({ allRecipes }) => {
-    // useEffect(() => {
-    //     console.log(allRecipes);
-
-    // }, [])
-    // console.log(allRecipes);
+    
 
     return (
         <>
