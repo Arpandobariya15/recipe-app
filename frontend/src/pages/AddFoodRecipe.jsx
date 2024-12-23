@@ -18,7 +18,7 @@ const AddFoodRecipe = () => {
         await axios.post("http://localhost:1000/recipe", recipeData,{
             headers:{
                 'Content-Type':'multipart/form-data', // this is cange on multer documentaion
-                // 'authorization':'bearer '+localStorage.getItem("token")
+                'authorization':'bearer '+localStorage.getItem("token") // varify from backend middelare file
             }
         })
             .then(() => navigate("/"))
