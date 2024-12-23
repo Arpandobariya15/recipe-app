@@ -2,9 +2,10 @@ import React, { useEffect } from 'react'
 import foodImg from '../assets/foodRecipe.png'
 import { BsStopwatchFill } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa6";
+import { useLoaderData } from 'react-router-dom';
 
-const RecipeItems = ({ allRecipes }) => {
-    
+const RecipeItems = () => {
+    const allRecipes = useLoaderData()
 
     return (
         <>
@@ -13,7 +14,7 @@ const RecipeItems = ({ allRecipes }) => {
                     allRecipes?.map((item, i) => {
                         return (
                             <div key={i} className='card'>
-                                <img src={foodImg} width="120px" height="100px"></img>
+                                <img src={`http://localhost:1000/images/${item.coverImage}`} width="120px" height="100px"></img>
                                 <div className='card-body'>
                                     <div className='title'>{item.title}</div>
                                     <div className='icons'>
